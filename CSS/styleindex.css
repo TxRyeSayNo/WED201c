@@ -1,0 +1,438 @@
+* {
+    margin: 0px 0.2px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    max-height: 100px;
+    max-width: 100%;
+}
+
+#headerLogo img {
+    height: 100%;
+    max-width: 150px;
+}
+
+#searchBox {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 30px 25px;
+    width: 35%;
+}
+
+#searchBox form {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 60%;
+}
+
+#searchBox input {
+    padding: 5px 0px 5px 1px;
+    margin: 0px 2px;
+    border-style: solid;
+    border-width: 1.5px 1px 1.5px 1px;
+    width: 85%;
+}
+
+#searchBox button {
+    cursor: pointer;
+    padding: 3px 1px 3px 1px;
+    color: #ffff;
+    background-color: rgb(255, 118, 69);
+    border-width: 1px;
+}
+
+.NavBar {
+    height: 40px;
+    padding: 0.5px 0px 0.5px 0px;
+    margin: 5px 0px;
+    align-content: center;
+    justify-items: center;
+    background-color: rgb(253, 230, 234);
+}
+
+.NavBar ul {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.NavBar ul li {
+    margin: 0px 25px;
+}
+
+.NavBar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.Container {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+}
+
+.Container #banner {
+    width: 66%;
+    height: inherit;
+}
+
+#banner img {
+    margin: 0px 5px;
+    padding: 0px 5px;
+    width: 100%;
+    height: inherit;
+    object-fit: fill;
+}
+
+#registration {
+    background-color: rgb(255, 240, 242);
+    justify-items: center;
+    width: 32%;
+    padding: 20px;
+    margin: 0px 10px 0px 5px;
+}
+
+#registration h2 {
+    margin: 0px 0px 10px;
+    font-size: 19px;
+}
+
+#registration form {
+    justify-content: space-between;
+    width: 100%;
+}
+
+#registration .Form {
+    height: 30px;
+    margin: 15px 0px 20px 0px;
+    width: inherit;
+}
+
+#registration .Form label {
+    margin: 0px 10px;
+    font-size: 14px;
+}
+
+#registration .Form input {
+    height: inherit;
+    width: 205px;
+    margin: 0px 5px;
+}
+
+#registration .Form input::placeholder {
+    font-size: 10px;
+}
+
+#registration .Form #phone {
+    margin: -1px
+}
+
+#registration .Form #fname {
+    margin: 3px;
+}
+
+#registration .Button {
+    padding-left: 26%;
+    height: 35px;
+    align-content: center;
+    margin: 40px 0px;
+}
+
+#registration .Button input {
+    height: inherit;
+    width: 80px;
+    border-radius: 14px;
+    border-style: none;
+    color: white;
+    background-color: rgb(255, 118, 69);
+    cursor: pointer;
+}
+
+.ListOfDishes h1 {
+    text-align: center;
+    margin: 30px;
+    color: rgb(255, 118, 69);
+}
+
+.Menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px 10px;
+}
+
+.Menu .Dish {
+    display: flex;
+    width: 98%;
+    height: 200px;
+    gap: 10px;
+    border: solid;
+    border-width: 1px;
+    margin-bottom: 15px;
+    border-color: rgb(199, 199, 199);
+    overflow: hidden;
+}
+
+.Menu .Dish img {
+    height: 100%;
+    width: 200px;
+    flex-shrink: 0;
+    margin: 0px;
+}
+
+.Menu .Dish>div {
+    width: 100%;
+    padding: 15px 0px;
+    margin-left: 10px;
+}
+
+.Menu .Dish div h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.Menu .Dish button {
+    padding: 7px 37px;
+    border-style: none;
+    border-radius: 20px;
+    background-color: rgb(255, 118, 69);
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.Menu .Dish div .AddToCartButton {
+    margin-top: 95px;
+    justify-self: center;
+    margin-left: 30px;
+}
+
+.Menu .Col2 {
+    justify-self: end;
+}
+
+.Cart {
+    margin: 0px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(240, 240, 240);
+    border-right: none;
+}
+
+.Cart h2 {
+    padding: 5px;
+    background-color: rgb(255, 240, 242);
+    font-size: 20px;
+}
+
+.Cart>#cartInfo {
+    padding: 15px 20px;
+}
+
+.Cart>#cartInfo>ul {
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-left: 33px;
+}
+
+.Cart li {
+    margin-bottom: 5px;
+}
+
+.Cart>#cartInfo>h3 {
+    font-size: 15px;
+}
+
+.Footer {
+    justify-items: center;
+    background-color: rgb(255, 240, 242);
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.Footer>p {
+    margin-bottom: 10px;
+}
+
+.Footer>h5 {
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN - MEDIA QUERIES ===== */
+
+/* Tablet và màn hình vừa (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        max-height: none;
+        align-items: center;
+    }
+
+    #headerLogo img {
+        max-width: 120px;
+    }
+
+    #searchBox {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .NavBar ul {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .NavBar ul li {
+        margin: 5px 15px;
+    }
+
+    .Container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Container #banner {
+        width: 100%;
+        height: 300px;
+    }
+
+    #registration {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #registration .Form input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #registration .Button {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .Menu {
+        grid-template-columns: 1fr;
+        margin: 0px 5px;
+    }
+
+    .Menu .Dish {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .Menu .Dish img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .Menu .Dish>div {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .Menu .Dish div .AddToCartButton {
+        margin-top: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .Menu .Col2 {
+        justify-self: stretch;
+    }
+
+    .Cart {
+        margin: 10px 5px;
+        border-right: solid 1px rgb(240, 240, 240);
+    }
+}
+
+/* Mobile nhỏ (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    #headerLogo img {
+        max-width: 100px;
+    }
+
+    #searchBox {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #searchBox input {
+        font-size: 12px;
+    }
+
+    #searchBox button {
+        font-size: 12px;
+    }
+
+    .NavBar ul li {
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+    .Container #banner {
+        height: 200px;
+    }
+
+    #registration {
+        padding: 15px;
+    }
+
+    #registration h2 {
+        font-size: 16px;
+    }
+
+    #registration .Form label {
+        font-size: 12px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #registration .Form {
+        height: auto;
+    }
+
+    #registration .Form input {
+        width: 100%;
+        max-width: none;
+        margin: 5px 0;
+    }
+
+    .ListOfDishes h1 {
+        font-size: 24px;
+        margin: 20px 10px;
+    }
+
+    .Menu .Dish img {
+        height: 180px;
+    }
+
+    .Menu .Dish div h3 {
+        font-size: 14px;
+    }
+
+    .Menu .Dish button {
+        padding: 7px 20px;
+        font-size: 12px;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .Cart h2 {
+        font-size: 18px;
+    }
+
+    .Footer {
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+}

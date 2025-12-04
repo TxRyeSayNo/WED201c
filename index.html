@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vietnamese cuisine</title>
+
+<!--Embed CSS here-->
+<link rel="stylesheet" href="./CSS/styleindex.css">
+
+</head>
+
+
+<body>
+
+	<div> <!--div contains all the web page content-->
+
+		<div class="Header"> <!--div contains header content-->
+
+			<div id="headerLogo">
+				<a href="index.html"><img src="images/Logo.PNG"></a>
+			</div>
+
+			<div id="searchBox">
+			
+				<form>
+					<input type="text" placeholder="Search in website">
+					<button type="submit">Search</button>
+				</form>
+
+			</div>
+
+		</div> <!-- finish div contains header content-->
+		
+	<!--------------------------------------------------------------------------------------------------------------->	
+
+		<div class="NavBar"> <!--div contains menu content-->
+
+		  <ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">Contact</a></li>
+		  </ul>  
+
+		</div> <!-- finish div contains menu content-->
+
+	<!--------------------------------------------------------------------------------------------------------------->	
+	
+		<div class="Container"> <!--div contains banner and  Your registration information content-->
+
+			<div id="banner"> <!--div contains banner content-->
+				<img src="images/nhahang.png" alt="Vietnamese cuisine" />
+			</div> <!--finish div contains banner content-->
+
+			<div id="registration"> <!--div contains Your registration information content-->
+			 
+				 <h2>Your registration information</h2>
+
+				 <form action="#" method="post">
+
+					<div class="Form">
+						<label for="fname">First Name</label>
+						<input type="text" id="fname" name="firstname" placeholder="Your name.."/>
+					</div>
+
+					<div class="Form">
+						<label for="lname">Last Name</label>
+						<input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+					</div>
+
+					<div class="Form">
+						<label for="phone"> Your Phone</label>
+						<input type="text" id="phone" name="phone" placeholder="Your phone number.."/>
+					</div>
+
+					<div class="Button">
+						<input type="submit" value="Send" />
+					</div>
+
+
+				  </form>
+
+			</div> <!-- finish div contains Your registration information content-->
+
+		</div> <!-- Finish div contains banner and  Your registration information content-->
+
+		<!--------------------------------------------------------------------------------------------------------------->
+
+		<div class="ListOfDishes"> <!--div contains LIST OF DISHES content-->
+
+			<h1>LIST OF DISHES</h1>
+
+			<div class="Menu">
+
+				<div class="Dish">
+
+					<img src="images/goitom.jpg" alt="Bamboo shoot, shrimp and meat salad" />
+					<div>
+						<h3 class="FoodName">Bamboo shoot, shrimp and meat salad</h3>
+						<h3 class="Price">Price : $10</h3>
+						
+						<div class="AddToCartButton">
+							<button class="AddButton">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="Dish Col2">
+
+					<img src="images/Nemranchagio.jpg" alt="Fried spring rolls" />
+					<div>
+						<h3 class="FoodName">Fried spring rolls</h3>
+						<h3 class="Price">Price : $8</h3>
+
+						<div class="AddToCartButton">
+							<button class="AddButton">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+
+	
+				<div class="Dish">
+
+					<img src="images/Canhga.jpg" alt="Grilled chicken wings with salt and chili" />
+					<div>
+						<h3 class="FoodName">Grilled chicken wings with salt and chili</h3>
+						<h3 class="Price">Price : $14</h3>
+
+						<div class="AddToCartButton">
+							<button class="AddButton">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="Dish Col2">
+
+					<img src="images/Lathaichuacay.jpg" alt="Thai hot and sour hot pot" />
+					<div>
+						<h3 class="FoodName">Thai hot and sour hot pot</h3>
+						<h3 class="Price">Price : $25</h3>
+
+						<div class="AddToCartButton">
+							<button class="AddButton">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div style="clear: both ;" > </div>
+
+		</div> <!--div contains LIST OF DISHES content-->
+
+
+	   <!------------------------------------------------------------------------------------------------------------------->
+
+		 <div class="Cart"> <!--div contains cart content-->
+
+			<h2>Your Cart</h2>
+			
+			<div id="cartInfo">
+
+				<ul id="myCart">
+					<p id="emptyCart">Your cart is empty.</p>
+				</ul>
+				
+				<h3 id="totalPrice">Total: $0</h3>
+
+			</div>
+			
+		 </div> <!-- finish div contains cart content-->
+
+	   <!------------------------------------------------------------------------------------------------------------------->   
+
+		<div class="Footer"> <!--div contains footer content-->
+
+					<p>Email : Vietnamesecuisine@gmail.com</p>
+					<p>Address: 100 Phan Van Tri, Binh Thanh District, HCMC</p>
+					<h5>&copy; Copyright 2025. Vietnamesecuisine.com</h5>
+
+		</div> <!-- finish div contains footer content-->
+		
+	</div> <!--finish div contains all the web page content-->
+	
+	<!------------------------------------------------------------------------------------------------------------------->
+	
+	<script>
+		//Write your Javascript code here
+		const addButton = document.querySelectorAll('.AddButton');
+		const myCart = document.getElementById('myCart');
+		const emptyCart = document.getElementById('emptyCart');
+		const totalPriceDisplay = document.getElementById('totalPrice');
+
+		let totalPrice = 0;
+
+		function updateTotalPrice() {
+			totalPriceDisplay.textContent = `Total: $${totalPrice}`;
+		}
+
+		function addFoodToCart(event) {
+			if(emptyCart) {
+				emptyCart.style.display = 'none';
+			}
+
+			const clickedButton = event.target;
+			const dish = clickedButton.closest('.Dish');
+			const foodName = dish.querySelector('.FoodName').textContent.trim();
+			let price = dish.querySelector('.Price').textContent.trim();
+			const newCartItem = document.createElement('li');
+
+			price = price.replace(/[^0-9]/g, '');
+			totalPrice += parseInt(price);
+			newCartItem.textContent = `${foodName} - $${price}`;
+			myCart.appendChild(newCartItem);
+			updateTotalPrice();
+			console.log(`Đã thêm món: ${foodName}`)
+		}
+
+		addButton.forEach(button => {
+			button.addEventListener('click', addFoodToCart);
+		});
+	
+	</script>
+	
+	
+</body>
+
+</html>
+
+
